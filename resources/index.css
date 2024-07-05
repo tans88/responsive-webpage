@@ -1,0 +1,504 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+}
+
+/** Navigation section **/
+
+.desktop{
+    height: 69px;
+    width: 100%;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    z-index: 1;
+}
+
+.desktop h1{
+    padding-left: 30px;
+    font-size: 1.5rem;
+    font-family: "Roboto", sans-serif;
+    font-weight: 200;
+}
+
+.desktop .nav-menu{
+    text-align: right;
+    margin-right: 30px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+}
+
+.desktop .nav-menu li{
+    display: inline;
+    margin-left: 40px;
+}
+
+.nav-menu li button a{
+    color: white;
+}
+
+li a{
+    text-decoration: none;
+    color: black;
+}
+
+li a:hover{
+    font-weight: bold;
+}
+
+.icon{
+    height: 5%;
+    width: 5%;
+}
+
+.mobile{
+    width: 100%;
+    position: fixed;
+    background-color: white;
+    z-index: 1;
+    display: none;
+}
+
+.mobile ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-left: 30px;
+}
+
+.mobile ul li{
+    list-style-type: none;
+    padding: 0;
+}
+
+.mobile ul li img{
+    width: 25%;
+    height: auto;
+}
+
+.mobile li button{
+    background-color: #9dc02a;
+    border: #9dc02a;
+    border-radius: 4px;
+    padding: 3px 8px;
+    margin-right: 60px;
+    height: 1.5rem;
+    white-space: nowrap;
+}
+
+.mobile li button a{
+    color: white;
+}
+
+@media only screen and (max-width: 760px){
+    .desktop{
+        display: none;
+    }
+
+    .mobile{
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 480px){
+    .mobile{
+        height: 48px;
+        padding-top: 10px; 
+    }
+}
+
+/** First section **/
+
+header{
+    position: relative;
+    top: 70px;
+    width: 100%;
+    height: 43.5rem;
+    display: flex;
+    background-image: url(../resources/vintage-camera.jpeg);
+    background-position: bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+    align-items: center;
+    justify-content: end;
+}
+
+header .info{
+    width: 600px;
+    height: 375px;
+    margin-right: 100px;
+    background-color: #9dc02a;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    text-align: center;
+    border: 1px solid #979797;
+    border-radius: 4px;
+}
+
+header .instant{
+    font-family: "Damion", cursive;
+    font-size: 2rem;
+    color: white;
+    margin-top: 32px;
+}
+
+header .format-camera{
+    font-family: "Rubik", sans-serif;
+    font-size: 3rem;
+    font-weight: 300;
+    color: white;
+}
+
+header .email-us{
+    max-width: 70%;
+    margin-top: 12px;
+    font-weight: 300;
+    color: white;
+    font-size: 1.25rem;
+    line-height: 1,4;
+}
+
+header button{
+    margin-top: 30px;
+    width: 408px;
+    height: 64px;
+    background-color: #4a4a4a;
+    border-radius: 4px;
+}
+
+header .join{
+    color: white;
+    font-size: 1.25rem;
+    line-height: 1.4;
+}
+
+@media only screen and (max-width: 760px){
+    header{
+        height: 25rem;
+        position: relative;
+        top: 35px;
+    }
+    
+    header .info{
+        background-color: transparent;
+        border: none;
+        display: flex;
+        height: auto;
+        justify-content: center;
+        margin: 0 auto;
+    }
+
+    header .instant{
+        margin-top: 0;
+    }
+    
+    header .info .email-us{
+        display: none;
+    }
+
+    header .info button{
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 480px){
+    header{
+        height: 20rem;
+    }
+
+    header .instant{
+        font-size: 1rem;
+    }
+
+    header .format-camera{
+        font-size: 2rem;
+    }
+}
+
+/** Section two **/
+.two{
+    position: relative;
+    top: 70px;
+    background-color: #d9d7d2;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 4rem 5%;
+}
+
+.two div{
+    background-color: white;
+    padding: 2rem;
+    margin: 0px 1.25rem;
+    flex: 1;
+    text-align: center;
+}
+
+.two div img{
+    margin: 0 auto;
+    width: 90%;
+    height: auto;
+}
+
+.two .info{
+    text-align: center;
+}
+
+.two div h2{
+    color: #4a4a4a;
+    font-size: 2.25rem;
+    font-weight: bold;
+    line-height: 1.2;
+    flex-wrap: wrap;
+    margin-top: 0.5rem;
+}
+
+.two div p{
+    color: #4a4a4a;
+    margin-top: 0.5rem;
+    font-weight: 300;
+    line-height: 1.2;
+    flex-wrap: wrap;
+}
+
+@media only screen and (max-width: 760px){
+    .two{
+        position: relative;
+        top: 30px;
+        padding: 1.3rem;
+    }
+
+    .two div{
+        margin: 0 1rem;
+    }
+
+    .two div h2{
+        font-size: 1rem;
+    }
+
+    .two div p{
+        font-size: 0.7rem;
+    }
+}
+
+@media only screen and (max-width: 480px){
+    .two{
+        display: block;
+        padding: 0;
+    }
+
+    .two div{
+        margin: 0;
+    }
+
+    .two .first-photo{
+        background-color: #d9d7d2;
+    }
+}
+
+/** Section three **/
+.filters{
+    position: relative;
+    background-color: #4a4943;
+    top: 70px;
+    padding-bottom: 65px;
+}
+
+.filters .info{
+    padding-top: 65px;
+    text-align: center;
+    color: white;
+}
+
+.filters .info h2{
+    font-size: 2.25rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.filters .info p{
+    font-weight: 300;
+    margin-bottom: 80px;
+}
+
+.filters .images{
+    padding: 0 1%;
+    text-align: center;
+}
+
+.filters .images img{
+    width: 20%;
+    height: auto;
+}
+
+@media only screen and (max-width: 760px){
+    .filters{
+        top: 30px;
+        padding-bottom: 2rem;
+    }
+
+    .filters .info{
+        padding-top: 2rem;
+    }
+
+    .filters .info h2{
+        font-size: 1.5rem;
+    }
+
+    .filters .info p{
+        font-size: 0.7rem;
+        margin-bottom: 40px;
+    }
+}
+
+@media only screen and (max-width: 480px){
+    .filters{
+        padding-bottom: 1rem;
+    }
+
+    .filters .info h2{
+        font-size: 1rem;
+    }
+
+    .filters .info p{
+        font-size: 0.6rem;
+        margin-bottom: 20px;
+    }
+
+    .filters .images .extra{
+        display: none;
+    }
+
+    .filters .images img{
+        width: 25%;
+    }
+}
+
+/** Quote section **/
+.quote{
+    position: relative;
+    top: 70px;
+    background-color: #d9d7d2;
+}
+
+.quote h2{
+    padding-top: 80px;
+    padding-bottom: 80px;
+    text-align: center;
+    font-family: "Playwrite Australia SA", cursive;
+    color: #4a4a4a;
+    font-size: 2rem;
+    line-height: 1.1;
+    font-weight: 100;
+}
+
+.quote img{
+    margin-left: 30px;
+}
+
+@media only screen and (max-width: 760px){
+    .quote{
+        top: 30px;
+    }
+
+    .quote h2{
+        padding-top: 60px;
+        padding-bottom: 60px;
+        text-align: center;
+        font-size: 1.2rem;
+    }
+
+    .quote img{
+        width: 12%;
+        height: auto;
+        margin-left: 40px;
+        margin-top: 10px;
+    }
+}
+
+@media only screen and (max-width: 480px){
+    .quote h2{
+        padding-top: 30px;
+        padding-bottom: 30px;
+        width: 40%;
+        margin: 0 auto;
+        font-size: 1rem;
+    }
+
+    .quote img{
+        width: 20%;
+        margin-left: 20px;
+    }
+}
+
+/** Footer **/
+footer{
+    position: relative;
+    top: 70px;
+    height: 65px;
+    background-color: #9b9b9b;
+    font-size: 0.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+footer p{
+    color: white;
+}
+
+footer .copyright{
+    margin-left: 30px;
+}
+
+footer .designed{
+    margin-right: 30px;
+}
+
+@media only screen and (max-width: 760px){
+    footer{
+        top: 30px;
+        height: 40px;
+    }
+
+    footer p{
+        font-size: 0.7rem;
+    }
+
+    footer .copyright{
+        margin-left: 15px;
+    }
+
+    footer .designed{
+        margin-right: 15px;
+    }
+}
+
+@media only screen and (max-width: 480px){
+    footer{
+        height: 20px;
+    }
+
+    footer p{
+        font-size: 0.4rem;
+    }
+
+    footer .copyright{
+        margin-left: 10px;
+    }
+
+    footer .designed{
+        margin-right: 10px;
+    }
+}
